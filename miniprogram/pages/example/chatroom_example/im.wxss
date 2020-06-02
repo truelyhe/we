@@ -1,0 +1,22 @@
+/* pages/databaseGuide/databaseGuide.wxss */
+
+@import "../../../style/guide.wxss";
+
+.guide .counter {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}
+.box-shadow{
+  box-shadow:1px 1px 10px #00d8a0
+}

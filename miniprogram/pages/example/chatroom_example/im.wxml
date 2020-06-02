@@ -1,0 +1,55 @@
+<view class="container">
+可以扩展给好友修改备注的功能，给好友建立一个
+ <view class="uploader">
+    <navigator url="" open-type="navigate" class="uploader-text">
+      <text>好友请求列表(有请求则显示)</text>
+    </navigator>
+</view>
+
+<view wx:for="{{peoplecheck}}" wx:for-index="index" wx:key="key">
+    <image class="userinfo-avatar"  src="{{peoplecheck[index].peopleask.avatarUrl}}"> </image>
+    <text>{{peoplecheck[index].peopleask.nickName}}</text>
+    <button  data-info="{{peoplecheck[index]}}" bindtap="confirmpeopleadd"> 接收该好友请求</button>
+    <button  data-info="{{peoplecheck[index]}}"  bindtap="cancelpeopleadd"> 拒绝该好友请求</button>
+</view>
+
+<view wx:for="{{askjujuelist}}" wx:for-index="index" wx:key="key">
+    <image class="userinfo-avatar"  src="{{askjujuelist[index].peopleask.avatarUrl}}"> </image>
+    <text>{{askjujuelist[index].peopleask.nickName}}</text>
+    <button  data-info="{{askjujuelist[index]}}" bindtap="knowjujue"> 知道了</button>
+</view>
+
+  <view class="uploader">
+    <navigator url="" open-type="navigate"   class="uploader-text">
+      <text>进入聊天室(点击下方聊天按钮即可)</text>
+    </navigator>
+  </view>
+</view>
+
+<button bindtap="go" data-id="chat1">聊天室1</button>
+<button  bindtap="go" data-id="chat2">聊天室2</button>
+<button  bindtap="go" data-id="chat3">聊天室3</button>
+
+
+<input class="input_coding" bindinput="Input" placeholder-style="color:#00d8a0" placeholder-class="placeholderStyle"
+value="{{phone}}" confirm-type="search"placeholder='请输入手机号进行搜索' style='box-shadow: 0 0 1px #00d8a0' type='text' maxlength='11'/>
+<button  bindtap="searchpeople">搜索添加好友</button>
+
+
+<block wx:if="{{addpeopledetail}}">
+<view>
+<image class="userinfo-avatar" src="{{addpeopledetail.userInfo.avatarUrl}}"> </image>
+<text>{{addpeopledetail.userInfo.nickName}}</text>
+<button  bindtap="addpeople">添加好友</button>
+</view>
+</block>
+
+ <view class="uploader">
+    <navigator url="" open-type="navigate" class="uploader-text">
+      <text>下边是您的好友:(点击即可查看好友主页)</text>
+    </navigator>
+</view>
+<view wx:for="{{peoplelist}}" wx:for-index="index" wx:key="key"  data-info="{{peoplelist[index]}}" bindtap="peoplepage">
+    <image class="userinfo-avatar"  src="{{peoplelist[index].userInfo.avatarUrl}}"> </image>
+    <text>{{peoplelist[index].userInfo.nickName}}</text>
+</view>

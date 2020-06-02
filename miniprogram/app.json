@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/example/chatroom_example/im",
+    "pages/example/chatroom_example/room/room",
+    "pages/example/subscribemessage/subscribemessage",
+    "pages/login/login",
+    "pages/example/chatroom_example/haoyoupage/haoyoupage"
+  ],
+  "window": {
+    "backgroundColor": "#9fd1ea",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9fd1ea",
+    "navigationBarTitleText": "仿微信",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

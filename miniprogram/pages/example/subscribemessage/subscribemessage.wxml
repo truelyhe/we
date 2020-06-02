@@ -1,0 +1,46 @@
+<view class="container">
+  <view wx:for="{{ jiaoyi }}" class="card" wx:key="{{ item.id }}">
+  <!-- 
+      这里的jiaoyi数组，可以是根据订单类别来赋值的，大多数情况下可能只是一个订单信息
+      这个根据自己具体的功能来确定
+  -->
+    <view class="card-body">
+      <view class="card-desc">
+        <text class="card-label">昵称：</text>
+        <text>{{ item.thing1.value}}</text>
+      </view>
+      <view class="card-desc">
+        <text class="card-label">活动名称：</text>
+        <text>{{ item.thing2.value }}</text>
+      </view>
+      <view class="card-desc">
+        <text class="card-label">活动日期：</text>
+        <text>{{ item.date3.value}}</text>
+      </view>
+      <view class="card-desc">
+        <text class="card-label">活动说明：</text>
+        <text>{{ item.thing4.value}}</text>
+      </view>
+      <view class="card-desc">
+        <text class="card-label">预约结果：</text>
+        <text>{{ item.phrase5.value}}</text>
+      </view>
+    </view>
+    <button class="button" data-item="{{item}}" bindtap="Subscribe"  hover-class="button-hover">
+      订阅书籍交易消息提醒
+    </button>
+     <button class="button1" data-item="{{item}}" bindtap="send"  hover-class="button-hover">
+      发送书籍交易消息提醒
+    </button>
+
+
+  </view>
+</view>
+
+
+
+<!-- 模仿卖家发货/买家收获，可以调用根据库中的信息，向卖家/买家发送消息提醒-->
+
+
+
+
